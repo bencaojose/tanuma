@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Roubo</title>
+
+     <!-- Adicione o link para o CSS do Tailwind -->
+     <link rel="stylesheet" href="../../src/output.css">
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     
+</head>
+<body class="bg-gray-100 py-12">
+    <div class="max-w-md mx-auto bg-white rounded p-5">
+        <h1 class="text-2xl mb-5">Formulario Roubo</h1>
+        <form action="registo_processo.php" method="POST">
+
+            <div class="mb-4">
+                <label for="id_carro" class="block text-sm font-medium text-gray-700">Id do Carro</label>
+                <input type="number" name="id_carro" id="id_carro" required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="data_roubo" class="block text-sm font-medium text-gray-700">Data do Roubo</label>
+                <input type="date" name="data_roubo" id="data_roubo" required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="local_roubo" class="block text-sm font-medium text-gray-700">Loca do Roubo</label>
+                <input type="text" name="local_roubo" id="local_roubo" required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="descricao_roubo" class="block text-sm font-medium text-gray-700">Descrição do Roubo</label>
+                <input type="text" name="descricao_roubo" id="descricao_roubo"required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+            </div>
+
+            <div class="mb-4">
+                <label for="status_recuperacao" class="block text-sm font-medium text-gray-700">Status de Recuperação</label>
+                <select name="status_recuperacao" id="status_recuperacao" required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
+                    <option value="Recuperado">Recuperado</option>
+                    <option value="Não recuperado">Não Recuperado</option>
+                    <option value="Em processo">Em Processo</option>
+                </select>
+            </div>
+
+            <div class="mb-4"><input type="submit" value="Enviar" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-pointer"></div>
+        </form>
+    </div>
+</body>
+</html>
